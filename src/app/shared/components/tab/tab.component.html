@@ -1,0 +1,101 @@
+
+<h4 class="bg-primary text-white p-3">
+    <strong>TAB IN ANGUALR</strong>
+    </h4>
+
+ <div class="container mt-4 mb-4">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a (click)="onTabClick('angular')" href="javascript:;" 
+                    class="nav-link"
+                    [ngClass]="{
+                        active : selectedFrameWork == 'angular'
+                    }">ANGULAR</a>
+                </li>
+                <li class="nav-item">
+                    <a (click)="onTabClick('node js')" href="javascript:;" class="nav-link"
+                    [ngClass]="{
+                        active : selectedFrameWork == 'node js'
+                    }">NODE JS</a>
+                </li>
+                <li class="nav-item">
+                    <a (click)="onTabClick('rxjs')" href="javascript:;" class="nav-link"
+                    [ngClass]="{
+                        active : selectedFrameWork == 'rxjs'
+                    }">Rxjs</a>
+                </li>
+            </ul>
+            <hr>
+            <div class="tab-body">
+                <div class="card"
+                *ngIf="selectedFrameWork == 'angular'">
+                    <div class="card-body">
+                        <strong>ANGULAR</strong>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                             Corporis adipisci vitae est eos pariatur id dolorem fuga! Similique tempore,
+                              repellendus facere repellat neque at hic!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum architecto neque iste incidunt 
+                            aspernatur animi reiciendis alias laborum. Sequi, placeat, eveniet quam deleniti odio dicta aliquam
+                             voluptatibus et perspiciatis esse, expedita tenetur hic. Dolores odit natus voluptates autem earum
+                              officiis  atque perspiciatis inventore, iste eius vitae, blanditiis tempora fugit explicabo.
+                            </p>
+                    </div>
+                </div>
+                <div class="card"
+                *ngIf="selectedFrameWork == 'node js'">
+                    <div class="card-body">
+                        <strong>NODE JS</strong>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                             Corporis adipisci vitae est eos pariatur id dolorem fuga! Similique tempore,
+                              repellendus facere repellat neque at hic!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum architecto neque iste incidunt 
+                            aspernatur animi reiciendis alias laborum. Sequi, placeat, eveniet quam deleniti odio dicta aliquam
+                             voluptatibus et perspiciatis esse, expedita tenetur hic. Dolores odit natus voluptates autem earum
+                              officiis  atque perspiciatis inventore, iste eius vitae, blanditiis tempora fugit explicabo.
+                            </p>
+                    </div>
+                </div>
+                <div class="card"
+                *ngIf="selectedFrameWork == 'rxjs'">
+                    <div class="card-body">
+                        <strong>Rxjs</strong>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                             Corporis adipisci vitae est eos pariatur id dolorem fuga! Similique tempore,
+                              repellendus facere repellat neque at hic!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum architecto neque iste incidunt 
+                            aspernatur animi reiciendis alias laborum. Sequi, placeat, eveniet quam deleniti odio dicta aliquam
+                             voluptatibus et perspiciatis esse, expedita tenetur hic. Dolores odit natus voluptates autem earum
+                              officiis  atque perspiciatis inventore, iste eius vitae, blanditiis tempora fugit explicabo.
+                            </p>
+                    </div>
+                </div>
+            </div> 
+        
+            <!-- <ul class="nav nav-pills">
+                <li class="nav-item p-3" 
+                *ngFor="let skill of skillTab">
+                    <a (click)="onTabClick('{{skill}}')" href="javaScript:;" class="nav-link"
+                    [ngClass]="{
+                        active : selectedFrameWork == '{{skill}}'
+                    }">{{skill}}</a>
+                </li>
+            </ul>
+            <div class="tab-body">
+                <div class="card"
+                *ngFor="let skillContent of skillContent">
+                    <div class="card-body" 
+                    *ngIf="selectedFrameWork == '{{skill}}'">
+                        <strong>{{skillContent}}</strong>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius inventore
+                             repellendus sint veniam quos! Nam quae voluptatum, delectus facere vel asperiores rem.
+                              Officiis tenetur cupiditate distinctio nisi eos beatae earum obcaecati fuga a saepe eveniet,
+                               sapiente pariatur ipsam repellat minima illum perspiciatis nam necessitatibus laboriosam, velit
+                                facilis ullam cum. Dignissimos.</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div> 

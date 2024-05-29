@@ -1,0 +1,93 @@
+
+
+.img-Container{
+    height: 350px;
+    img{
+        height : 100%;
+        width:100%;
+        object-fit: cover;
+    }
+}
+
+.display-3{
+    font-size: 4rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+.mainHead{
+     font-weight: bold;
+     font-size: 28px;
+}
+
+.notavl{
+    filter: blur(1px) grayscale(1);
+}
+
+.noProudAvl{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.listSpec{
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+    list-style:inside;
+    list-style: circle;
+    color: #000;
+    font-weight: 500;
+}
+
+
+// .mat-list-item-content{
+//     font-size: 16px !important;
+//     padding: 0 16px !important;
+// }
+
+
+.price{
+    font-weight: bolder;
+    font-size: 26px;
+}
+
+.fa-indian-rupee-sign::before{
+      content:'\e1bc';
+}
+
+.para{
+    text-transform: capitalize;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.qty{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    color:#b31745;
+}
+
+
+.offer{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+    color:#008000;
+}
+
+.filpKart-assured{
+    height:30px;
+    img{
+        height: 100%;
+        width:auto;
+    }
+}

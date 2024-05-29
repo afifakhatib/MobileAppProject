@@ -1,0 +1,77 @@
+
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12 mb-4"
+        *ngFor="let mobileobj of mobileData">
+           <div class="card"
+           [ngClass]="{
+            'notavl' : !mobileobj.isAvailable
+           }">
+
+           <p class="noProudAvl"
+           *ngIf="!mobileobj.isAvailable">
+            Product NOT Available!!!
+           </p>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="img-Container">
+                            <img 
+                            *ngIf="mobileobj.image ; else noMobileimg"
+                            [src]="mobileobj.image" 
+                            [alt]="mobileobj.name"
+                            [title]="mobileobj.name"
+                            class="img-fluid">
+
+                            <ng-template #noMobileimg>
+                                <img src="https://placehold.co/600x400" 
+                                [alt]="mobileobj.name"
+                                [title]="mobileobj.name"
+                                class="img-fluid">
+                            </ng-template>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                       <h2 class="diplay-3 mb-0 mainHead mt-3">
+                        {{mobileobj.name}}
+
+                        <small class="rating p-1 rounded text-white"
+                        [ngClass]="{
+                            'bg-success' : mobileobj.rating >= 4,
+                            'bg-warning' : mobileobj.rating >= 3 && mobileobj.rating < 4,
+                            'bg-danger'  : mobileobj.rating < 3
+                        }">
+                            {{mobileobj.rating}}
+                    </small>
+                       </h2>
+                       <ul class="listSpec">
+                        <li
+                        *ngFor="let spec of mobileobj.specification">
+                               {{spec}}
+                       </li>
+                    </ul>
+                      
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="price mt-2">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>{{mobileobj.price}}
+                        </h4>
+                        <div class="filpKart-assured mb-2">
+                        <img height="21" class="img-fluid"
+                        src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png">
+                        </div>
+                        <p class="para"><i class="fa-solid fa-indian-rupee-sign"></i>{{mobileobj.deliveryCost}}</p>
+                        <h5 class="qty">{{mobileobj.Qty}}</h5>
+                         <p class="offer">{{mobileobj.offer}}</p>
+                
+
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</div>
