@@ -6,14 +6,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Mobilecomponent } from './shared/components/mobile/mobile.component';
 import {MatListModule} from '@angular/material/list';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { TabComponent } from './shared/components/tab/tab.component';
+import { Tab1Component} from './shared/components/tab1/tab1.component';
+import { Tab2Component } from './shared/components/tab2/tab2.component';
+import { Tab3component } from './shared/components/tab3/tab3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Mobilecomponent,
     HeaderComponent,
-    TabComponent
+    Tab1Component,
+    Tab2Component,
+    Tab3component
   ],
   imports: [
     BrowserModule,

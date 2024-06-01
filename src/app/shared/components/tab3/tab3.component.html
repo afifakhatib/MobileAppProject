@@ -1,0 +1,35 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="list">
+                <h2>by ngswitch </h2>
+            <ul class="nav nav-pills">
+            <li class="nav-item"
+            *ngFor="let skill of skillArr"
+            (click)="selectedSkill = skill.skillName">
+                    <a href="javascript:;" class="nav-link"
+                    [ngClass]="{
+                        active: selectedSkill.toLowerCase().includes(skill.skillName.toLowerCase())
+                    }"> {{skill.skillName}} </a>
+                </li>
+            </ul>
+            </div>
+
+            
+         <ng-container 
+         *ngFor="let skill of skillArr">
+            <div class="card" [ngSwitch]="selectedSkill">
+                <div class="card-body"
+               *ngSwitchCase="skill.skillName">
+                 <p [innerHTML]="skill.skillContent"
+                 *ngIf="selectedSkill.toLowerCase().includes(skill.skillName.toLowerCase())">
+                 </p>
+                </div>
+            </div>
+         </ng-container>
+        </div>
+    </div>
+</div>
